@@ -1,0 +1,46 @@
+{
+  "produkty": [
+    {
+      "productName": "Elegancka Letnia Sukienka",
+      "description": "Lekka i zwiewna sukienka idealna na letnie dni.",
+      "imageFileName": "elegancka-letnia-sukienka.jpg",
+      "rating": 4,
+      "category": "Sukienki"
+    },
+    {
+      "productName": "Skórzane Trampki Casual",
+      "description": "Wygodne skórzane trampki pasujące do każdego stroju.",
+      "imageFileName": "skorzane-trampki-casual.jpg",
+      "rating": 5,
+      "category": "Obuwie"
+    },
+    {
+      "productName": "Klasyczne Niebieskie Jeansy",
+      "description": "Klasyczne niebieskie jeansy, które nigdy nie wychodzą z mody.",
+      "imageFileName": "klasyczne-niebieskie-jeansy.jpg",
+      "rating": 3,
+      "category": "Spodnie"
+    },
+    {
+      "productName": "Kurtka Denimowa Vintage",
+      "description": "Stylowa kurtka z denimu w stylu vintage.",
+      "imageFileName": "kurtka-denimowa-vintage.jpg",
+      "rating": 4,
+      "category": "Kurtki"
+    },
+    {
+      "productName": "Miękka Koszulka Bawełniana",
+      "description": "Miękka bawełniana koszulka, która zapewnia komfort przez cały dzień.",
+      "imageFileName": "miekka-koszulka-bawelniana.jpg",
+      "rating": 5,
+      "category": "Koszulki"
+    },
+    {
+      "productName": "Elegancki Garnitur Biznesowy",
+      "description": "Elegancki garnitur biznesowy, idealny na ważne spotkania.",
+      "imageFileName": "elegancki-garnitur-biznesowy.jpg",
+      "rating": 4,
+      "category": "Garnitury"
+    }
+  ]
+}
