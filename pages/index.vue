@@ -1,3 +1,3 @@
 <template>
-  <h3>index</h3>
+  <h3>Indexx</h3>
 </template>
