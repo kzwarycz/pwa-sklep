@@ -36,7 +36,6 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .description {
@@ -47,7 +46,8 @@
 .social {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
+  padding-top: 10px;
 }
 
 .social span {
