@@ -1,12 +1,26 @@
 <template>
-  <TopNewsletterBar>
-    <template v-slot:content>
-      Zapisz się do naszego newslettera, aby otrzymywać najnowsze
-      promocje</template
+  <div>
+    <TopNewsletterBar
+      v-if="isNewsletterVisible"
+      @close="isNewsletterVisible = false"
     >
-  </TopNewsletterBar>
+      <template v-slot:content>
+        Zapisz się do naszego newslettera, aby otrzymywać najnowsze promocje.
+      </template>
+    </TopNewsletterBar>
 
-  <TopNav />
-  <slot />
-  <Footer />
+    <TopNav />
+    <slot />
+    <Footer />
+  </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      isNewsletterVisible: true,
+    };
+  },
+};
+</script>
