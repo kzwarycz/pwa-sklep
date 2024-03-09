@@ -84,7 +84,7 @@ export default {
 
 .add-to-cart {
   margin-right: 10px;
-  background-color: #007bff;
+  background-color: hsl(var(--primary));
   color: white;
   border: none;
   padding: 10px 15px;
