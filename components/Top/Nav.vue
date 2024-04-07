@@ -31,6 +31,6 @@ const showMobileMenu = () => {
 .centered {
   display: flex;
   justify-content: center;
-  padding-top: 20px; // adjust this value as needed
+  padding: 20px 0 20px 0;
 }
 </style>
