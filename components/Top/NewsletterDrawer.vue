@@ -9,19 +9,27 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { Input } from "@/components/ui/input";
+
+import { defineEmits } from "vue";
+
+const emit = defineEmits(["close"]);
+
+function confirm() {
+  emit("close");
+}
 </script>
 
 <template>
   <Drawer>
-    <DrawerTrigger class="trigger">Zapisz się!!!</DrawerTrigger>
-    <DrawerContent>
+    <DrawerTrigger class="trigger">Zapisz się!</DrawerTrigger>
+    <DrawerContent class="drawer-content">
       <DrawerHeader>
         <DrawerTitle>Podaj swój adres e-mail:</DrawerTitle>
         <Input type="email" placeholder="Adres e-mail" />
       </DrawerHeader>
       <DrawerFooter>
         <DrawerClose>
-          <Button class="confirm-button">Zapisz się</Button>
+          <Button class="confirm-button" @click="confirm">Zapisz się</Button>
         </DrawerClose>
         <DrawerClose>
           <Button class="confirm-button" variant="outline">Anuluj</Button>
@@ -49,5 +57,9 @@ import { Input } from "@/components/ui/input";
 
 .confirm-button {
   width: 100%;
+}
+
+.drawer-content {
+  z-index: 101;
 }
 </style>

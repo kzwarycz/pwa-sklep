@@ -1,8 +1,29 @@
-<script setup></script>
+<script setup>
+import { ref, onMounted } from "vue";
+
+let showNewsletter = ref(false);
+
+onMounted(() => {
+  const storedState = localStorage.getItem("showNewsletter");
+  if (storedState === null || storedState === "true") {
+    showNewsletter.value = true;
+  }
+});
+
+function closeComponent() {
+  hideNewsletter();
+}
+
+function hideNewsletter() {
+  showNewsletter.value = false;
+  localStorage.setItem("showNewsletter", "false");
+}
+</script>
+
 <template>
-  <div class="info">
+  <div class="info" v-if="showNewsletter">
     <slot name="content">Newsletter info</slot>
-    <TopNewsletterDrawer />
+    <TopNewsletterDrawer @close="hideNewsletter" />
     <button class="close-btn" @click="closeComponent">
       <svg
         width="15"
@@ -21,16 +42,6 @@
     </button>
   </div>
 </template>
-
-<script setup>
-import { defineEmits } from "vue";
-
-const emit = defineEmits(["close"]);
-
-function closeComponent() {
-  emit("close");
-}
-</script>
 
 <style scoped lang="scss">
 .info {
