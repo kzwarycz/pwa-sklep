@@ -5,49 +5,32 @@ const showMobileMenu = () => {
 };
 </script>
 <template>
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <NuxtLink class="navbar-item" to="/">
-        <img
-          src="https://bulma.io/images/bulma-logo.png"
-          width="112"
-          height="28"
-        />
-      </NuxtLink>
-
-      <a
-        role="button"
-        class="navbar-burger"
-        aria-label="menu"
-        aria-expanded="false"
-        data-target="navbarBasicExample"
-        @click="showMobileMenu"
-      >
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-
-    <div id="navbarBasicExample" :class="{ 'navbar-menu': !mobileMenu }">
-      <div class="navbar-start">
-        <NuxtLink to="/list" class="navbar-item"> Lista Produktów </NuxtLink>
-
-        <NuxtLink to="/contact" class="navbar-item"> Kontakt </NuxtLink>
-
-        <NuxtLink to="/product" class="navbar-item"> Produkt </NuxtLink>
-      </div>
-
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="buttons">
-            <a class="button is-primary">
-              <strong>Sign up</strong>
-            </a>
-            <a class="button is-light"> Log in </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </nav>
+ <nav class="centered hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
+  <a
+    href="/list"
+    class="text-muted-foreground transition-colors hover:text-foreground"
+  >
+    Produkty
+  </a>
+  <a
+    href="/contact"
+    class="text-muted-foreground transition-colors hover:text-foreground"
+  >
+    Kontakt
+  </a>
+  <a
+    href="/login"
+    class="text-muted-foreground transition-colors hover:text-foreground"
+  >
+    Zaloguj się
+  </a>
+</nav>
 </template>
+
+<style scoped lang="scss">
+.centered {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px; // adjust this value as needed
+}
+</style>
