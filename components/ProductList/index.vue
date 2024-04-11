@@ -24,7 +24,7 @@
       </div>
       <div class="product-action">
         <div class="product-price">{{ product.price }}</div>
-        <button class="add-to-cart">Add to Cart</button>
+        <button class="add-to-cart">Dodaj do koszyka</button>
       </div>
     </div>
   </div>
@@ -50,6 +50,7 @@ export default {
   margin: 0 auto;
   padding: 20px;
   margin-bottom: 90px;
+  margin-top: 60px;
 }
 
 .product-item {
