@@ -4,33 +4,56 @@ const showMobileMenu = () => {
   mobileMenu.value = !mobileMenu.value;
 };
 </script>
+
 <template>
- <nav class="centered hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
-  <a
-    href="/list"
-    class="text-muted-foreground transition-colors hover:text-foreground"
-  >
-    Produkty
-  </a>
-  <a
-    href="/contact"
-    class="text-muted-foreground transition-colors hover:text-foreground"
-  >
-    Kontakt
-  </a>
-  <a
-    href="/login"
-    class="text-muted-foreground transition-colors hover:text-foreground"
-  >
-    Zaloguj się
-  </a>
-</nav>
+  <nav class="navbar">
+    <NuxtLink to="/" class="logo-link">
+      <img src="/img/logo.png" alt="Logo" class="logo-img" />
+    </NuxtLink>
+    <div class="nav-links">
+      <NuxtLink to="/list" class="nav-item"> Produkty </NuxtLink>
+      <NuxtLink to="/contact" class="nav-item"> Kontakt </NuxtLink>
+      <NuxtLink to="/login" class="nav-item"> Zaloguj się </NuxtLink>
+    </div>
+  </nav>
 </template>
 
 <style scoped lang="scss">
-.centered {
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.logo-link {
+  flex-shrink: 0;
+}
+
+.logo-img {
+  height: 60px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
   justify-content: center;
-  padding: 20px 0 20px 0;
+  flex-grow: 1;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: inherit;
+  padding: 10px 0;
+  text-align: center;
 }
 </style>
