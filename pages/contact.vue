@@ -16,7 +16,7 @@
         />
       </div>
       <div class="form-group">
-        <label for="email">Email</label>
+        <label for="email">E-mail</label>
         <Input
           type="email"
           v-model="form.email"
