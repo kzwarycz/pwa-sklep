@@ -10,8 +10,6 @@ import {
 } from "@/components/ui/drawer";
 import { Input } from "@/components/ui/input";
 
-import { defineEmits } from "vue";
-
 const emit = defineEmits(["close"]);
 
 function confirm() {
