@@ -16,6 +16,15 @@
         />
       </div>
       <div class="form-group">
+        <label for="name">Nazwisko</label>
+        <Input
+          v-model="form.name"
+          id="surname"
+          placeholder="Twoje Nazwisko"
+          required
+        />
+      </div>
+      <div class="form-group">
         <label for="email">E-mail</label>
         <Input
           type="email"
