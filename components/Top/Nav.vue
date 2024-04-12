@@ -11,7 +11,7 @@ const showMobileMenu = () => {
       <img src="/img/logo.png" alt="Logo" class="logo-img" />
     </NuxtLink>
     <div class="nav-links">
-      <NuxtLink to="/list" class="nav-item"> Produkty </NuxtLink>
+      <NuxtLink to="/products" class="nav-item"> Produkty </NuxtLink>
       <NuxtLink to="/contact" class="nav-item"> Kontakt </NuxtLink>
       <NuxtLink to="/login" class="nav-item"> Zaloguj się </NuxtLink>
     </div>

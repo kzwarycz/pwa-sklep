@@ -21,7 +21,7 @@
           </p>
           <div class="flex justify-center">
             <NuxtLink
-              to="/list"
+              to="/products"
               class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg goto-product"
             >
               Kup Teraz
@@ -40,13 +40,13 @@
             :key="product.id"
           >
             <NuxtLink
-              :to="`/list`"
+              :to="`/products/${product.id}`"
               class="block relative h-48 rounded overflow-hidden high"
             >
               <img
                 alt="produkt"
                 class="object-cover object-center w-full h-full block"
-                :src="product.image"
+                :src="`/img/${product.imageFileName}`"
               />
             </NuxtLink>
             <div class="mt-4">
@@ -54,9 +54,9 @@
                 {{ product.category }}
               </h3>
               <h2 class="text-gray-900 title-font text-lg font-medium">
-                {{ product.name }}
+                {{ product.productName }}
               </h2>
-              <p class="mt-1">{{ product.price }} PLN</p>
+              <p class="mt-1">{{ product.price }} </p>
             </div>
           </div>
         </div>
@@ -66,33 +66,13 @@
 </template>
 
 <script>
+import { useProductList } from '~/composables/productList';
+let products = useProductList().slice(0,3);
 export default {
   name: "App",
   data() {
     return {
-      products: [
-        {
-          id: 1,
-          name: "Garnitur męski",
-          category: "Moda męska",
-          price: 100,
-          image: "/img/garnitur.webp",
-        },
-        {
-          id: 2,
-          name: "Strój sportowy",
-          category: "Moda damska",
-          price: 10,
-          image: "/img/sport_outfit.webp",
-        },
-        {
-          id: 3,
-          name: "Sweter",
-          category: "Moda damska",
-          price: 50,
-          image: "/img/sweter.webp",
-        },
-      ],
+      products: products
     };
   },
 };

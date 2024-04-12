@@ -2,14 +2,15 @@
   <div class="product-list">
     <div
       v-for="product in products"
-      :key="product.productName"
+      :key="product.id"
       class="product-item"
     >
-      <img
-        :src="`/img/${product.imageFileName}`"
-        :alt="product.productName"
-        class="product-image"
-      />
+    <nuxt-link :to="`/products/${product.id}`"> <img
+          :src="`/img/${product.imageFileName}`"
+          :alt="product.productName"
+          class="product-image"
+        />
+      </nuxt-link>
       <div class="product-details">
         <h3>{{ product.productName }}</h3>
         <div class="product-rating">
@@ -31,12 +32,13 @@
 </template>
 
 <script>
-import productList from "./productList.json";
+import { useProductList } from '~/composables/productList';
+const products = useProductList();
 
 export default {
   data() {
     return {
-      products: productList.produkty,
+      products: products,
     };
   },
 };

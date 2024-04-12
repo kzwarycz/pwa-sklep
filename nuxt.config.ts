@@ -13,5 +13,16 @@ export default defineNuxtConfig({
      * @default "./components/ui"
      */
     componentDir: './components/ui'
-  }
+  },
+  hooks: {
+    'pages:extend'(pages) {
+        pages.push(
+          {
+              name: 'product',
+              path: '/products/:id',
+              file: '/pages/product.vue',
+          }
+        );
+      }
+    }
 })
