@@ -86,5 +86,6 @@ const cartItems = getCartItems();
   font-size: 12px;
   border-radius: 50%;
   padding: 2px 5px;
+
 }
 </style>
