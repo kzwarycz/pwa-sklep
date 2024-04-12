@@ -1,8 +1,10 @@
 <script setup>
+
 const mobileMenu = ref(false);
 const showMobileMenu = () => {
   mobileMenu.value = !mobileMenu.value;
 };
+
 </script>
 
 <template>
@@ -14,6 +16,7 @@ const showMobileMenu = () => {
       <NuxtLink to="/products" class="nav-item"> Produkty </NuxtLink>
       <NuxtLink to="/contact" class="nav-item"> Kontakt </NuxtLink>
       <NuxtLink to="/login" class="nav-item"> Zaloguj się </NuxtLink>
+      <Cart/>    
     </div>
   </nav>
 </template>
@@ -24,7 +27,7 @@ const showMobileMenu = () => {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 50;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -56,4 +59,5 @@ const showMobileMenu = () => {
   padding: 10px 0;
   text-align: center;
 }
+
 </style>

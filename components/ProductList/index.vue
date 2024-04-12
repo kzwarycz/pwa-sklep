@@ -25,23 +25,18 @@
       </div>
       <div class="product-action">
         <div class="product-price">{{ product.price }}</div>
-        <button class="add-to-cart">Dodaj do koszyka</button>
+        <button @click="addToCart(product)" class="add-to-cart">Dodaj do koszyka</button>
       </div>
     </div>
   </div>
 </template>
 
-<script>
+<script setup>
 import { useProductList } from '~/composables/productList';
-const products = useProductList();
+import { useCart } from '~/composables/cart';
 
-export default {
-  data() {
-    return {
-      products: products,
-    };
-  },
-};
+const products = useProductList();
+const { addToCart } = useCart();
 </script>
 
 <style>

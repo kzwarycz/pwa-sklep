@@ -55,6 +55,6 @@ export function useProductList() {
       price: "100 zł"
     }
   ];
-  
+
   return products;
 }
