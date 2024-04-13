@@ -39,6 +39,11 @@ const showMobileMenu = () => {
 
 .logo-link {
   flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.logo-link:hover {
+  transform: scale(1.1); 
 }
 
 .logo-img {
@@ -59,6 +64,10 @@ const showMobileMenu = () => {
   color: inherit;
   padding: 10px 0;
   text-align: center;
+  transition: transform 0.3s ease;
 }
 
+.nav-item:hover {
+  transform: scale(1.1); 
+}
 </style>
