@@ -78,6 +78,11 @@ const cartItems = getCartItems();
 .cart-img {
   height: 35px;
   width: auto;
+  transition: transform 0.3s ease;
+}
+
+.cart-img:hover {
+  transform: scale(1.1); 
 }
 
 .cart-count {
