@@ -1,7 +1,6 @@
 <template>
   <head>
     <title>DALL·E 2 Clothing</title>
-    <link rel="manifest" href="/manifest.json" />
   </head>
   <div>
     <TopNewsletterBar
