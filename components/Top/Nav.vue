@@ -16,6 +16,7 @@ const showMobileMenu = () => {
       <NuxtLink to="/products" class="nav-item"> Produkty </NuxtLink>
       <NuxtLink to="/contact" class="nav-item"> Kontakt </NuxtLink>
       <NuxtLink to="/login" class="nav-item"> Zaloguj się </NuxtLink>
+      <NuxtLink to="/signup" class="nav-item"> Zarejestruj się </NuxtLink>
       <Cart/>    
     </div>
   </nav>
