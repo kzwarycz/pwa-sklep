@@ -38,6 +38,7 @@
               </li>
             </ul>
             <p v-else>Koszyk jest pusty.</p>
+            <p class="cart-summary" v-if="cartItems.length > 0"><b>Suma:</b> {{ getTotalValue() }} zł</p>
           </div>
         </SheetDescription>
       </SheetHeader>
@@ -57,7 +58,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 
-const { getCartItems, removeFromCart, incrementQuantity, decrementQuantity } = useCart();
+const { getCartItems, removeFromCart, incrementQuantity, decrementQuantity, getTotalValue } = useCart();
 const cartItems = getCartItems();
 </script>
 
@@ -86,6 +87,9 @@ const cartItems = getCartItems();
   font-size: 12px;
   border-radius: 50%;
   padding: 2px 5px;
+}
 
+.cart-summary {
+  margin-top: 20px;
 }
 </style>

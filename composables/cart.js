@@ -29,6 +29,9 @@ export function useCart() {
     const getCartItems = () => {
         return cartItems.value;
     };
+    const getTotalValue = () => {
+        return cartItems.value.reduce((total, item) => total + parseFloat(item.price.substring(0, item.price.length - 3)) * item.quantity, 0);
+    };
 
     return {
         addToCart,
@@ -36,5 +39,6 @@ export function useCart() {
         incrementQuantity,
         decrementQuantity,
         getCartItems,
+        getTotalValue,
     };
 }
