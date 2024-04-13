@@ -18,7 +18,7 @@
       <div class="form-group">
         <label for="name">Nazwisko</label>
         <Input
-          v-model="form.name"
+          v-model="form.surname"
           id="surname"
           placeholder="Twoje Nazwisko"
           required
@@ -68,6 +68,7 @@ const showAlert = ref(false);
 
 const form = reactive({
   name: "",
+  surname: "",
   email: "",
   message: "",
 });
