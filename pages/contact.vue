@@ -74,7 +74,6 @@ const form = reactive({
 
 const submitForm = () => {
   showAlert.value = true;
-  console.log(form);
   form.name = "";
   form.email = "";
   form.message = "";
